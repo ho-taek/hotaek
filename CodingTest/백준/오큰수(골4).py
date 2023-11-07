@@ -1,3 +1,7 @@
+import sys
+
+input = sys.stdin.readline
+
 n = int(input())
 a = list(map(int, input().split()))
 
@@ -5,7 +9,7 @@ answer = [0]*n
 stack = []
 
 for i in range(n):
-    while stack and stack[-1] < a[i]:
+    while stack and a[stack[-1]] < a[i]:
         answer[stack.pop()] = a[i]
     stack.append(i)
 
@@ -14,7 +18,7 @@ while stack:
 
 result = ""
 
-for i in answer:
-    result += str(i) + " "
+for i in range(n):
+    result += str(a[i])+" "
 
 print(result)
