@@ -11,6 +11,10 @@ for _ in range(m):
     a, b = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
+    
+for i in graph:
+    i.sort()
+
 visit_list = [False] * (n + 1)
 visit_list2 = [False] * (n + 1)
 
