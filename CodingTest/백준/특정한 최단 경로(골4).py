@@ -31,6 +31,5 @@ def dijkstra(start, end):
 v1, v2 = map(int, input().split())
 v1_distance = dijkstra(1,v1) + dijkstra(v1,v2) + dijkstra(v2,n)
 v2_distance = dijkstra(1,v2) + dijkstra(v2,v1) + dijkstra(v1,n)
-print(v1_distance, v2_distance)
 result = min(v1_distance,v2_distance)
 print(result if result < INF else -1)
