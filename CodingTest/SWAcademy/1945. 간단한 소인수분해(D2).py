@@ -10,4 +10,4 @@ for t in range(1, T+1):
             tmp += 1
             n /= i
         answer.append(tmp)
-print("#%d"%t, ' '.join(str(e) for e in answer))
+    print("#%d"%t, ' '.join(str(e) for e in answer))
