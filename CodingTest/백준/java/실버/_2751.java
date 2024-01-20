@@ -10,7 +10,7 @@ public class _2751 {
     
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+        StringBuilder sb = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
         
        ArrayList<Integer> list = new ArrayList<Integer>();
@@ -20,7 +20,8 @@ public class _2751 {
          }
          Collections.sort(list);
          for(int i : list){
-            System.out.println(i);
+            sb.append(i).append('\n');
          }
+         System.out.println(sb);
     }
 }
