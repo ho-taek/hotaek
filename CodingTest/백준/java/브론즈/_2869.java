@@ -11,10 +11,16 @@ public class _2869 {
         
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        long a = Long.parseLong(st.nextToken());
-        long b = Long.parseLong(st.nextToken());
-        long v = Long.parseLong(st.nextToken());
-        System.out.println(v);
-        System.out.println(v-a+b);
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        int v = Integer.parseInt(st.nextToken());
+        
+        int day = (v-a)/(a-b);
+
+        if((v-a)%(a-b) != 0){
+            day ++;
+        }
+        System.out.println(day+1);
+
     }
 }
