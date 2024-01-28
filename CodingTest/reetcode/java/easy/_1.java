@@ -1,19 +1,24 @@
 package reetcode.java.easy;
 
+import java.util.HashMap;
+
 public class _1 {
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
 
     }
+
     public static int[] twoSum(int[] nums, int target) {
-        for(int i=0 ; i < nums.length; i++){
-            for(int j=i+1 ; i < nums.length; j++){
-                if(nums[i]+nums[j] == target){
-                    int[] result = {i,j};
-                    return result;
-                }
+        HashMap<Integer, Integer> map = new HashMap();
+
+        for(int i=0; i < nums.length; i++){
+            if(map.containsKey(target-nums[i])){
+                return new int[] {map.get(target-nums[i]),i};
             }
+
+            map.put(target-nums[i], i);
+
         }
-        return new int[0];
+        return null;
     }
 }
