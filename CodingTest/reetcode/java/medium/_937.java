@@ -40,8 +40,8 @@ public class _937 {
             }
 
         });
-
-        return logs;
+        letterLogs.addAll(digitLogs);
+        return letterLogs.toArray(new String[0]);
     }
     
 }
