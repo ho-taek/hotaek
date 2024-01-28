@@ -13,7 +13,7 @@ public class _1427 {
         for(int i=0; i < array.length ; i++ ){
             sb.append(array[i]);
         }
-        System.out.println(sb);
+        System.out.println(sb.reverse());
 
 
     }
