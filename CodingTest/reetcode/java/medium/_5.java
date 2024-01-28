@@ -11,6 +11,9 @@ public class _5 {
 
     public static String longestPalindrome(String s) {
         int idx = s.length()-1;
+        if(idx == 0){
+            return s;
+        }
         int max = 0;
         String result = "";
         for(int i = 0 ; i < idx; i++){
