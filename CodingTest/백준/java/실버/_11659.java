@@ -22,16 +22,16 @@ public class _11659 {
             result += Integer.parseInt(input[i]);
             array[i+1] = result;
         }
-        System.out.println("result" + Arrays.toString(array));
+        
         for(int i=0; i < m; i++){
             String[] check = br.readLine().split(" ");
             int a = Integer.parseInt(check[0]);
             int b = Integer.parseInt(check[1]);
 
             if(a == 1){
-                System.out.println("답a"+array[b]);
+                System.out.println(array[b]);
             }else{
-                System.out.println("답"+(array[b]-array[a-1]));
+                System.out.println((array[b]-array[a-1]));
             }
         }
 
