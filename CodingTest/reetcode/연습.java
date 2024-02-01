@@ -1,13 +1,20 @@
 package reetcode;
 
-import java.util.Arrays;
-import java.util.Comparator;
-
+import java.util.*;
 public class 연습 {
     
     public static void main(String[] args){
-        String st = "abcde";
-        System.out.println(st.substring(0,2));
+        Queue<Integer> queue = new LinkedList<Integer>();
+
+        queue.add(3);
+        queue.add(5);
+        queue.add(7);
+
+        System.out.println(queue);
+        System.out.println(queue.peek());
+        queue.remove();
+        System.out.println(queue);
+        System.out.println(queue.poll());
         
     }
 }
