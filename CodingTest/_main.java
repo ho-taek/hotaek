@@ -1,39 +1,50 @@
 import java.util.*;
+
 public class _main {
-    
-    public static void main(String[] args){
-        String st = "20+4*2-8*12+10*2*3+2" ;
-        String[] array = st.split("\\W");
-        String[] cal = st.split("\\w+");
-        System.out.println(Arrays.toString(cal));
-        System.out.println(Arrays.toString(array));
 
-        List<String> arrayList = new ArrayList<String>(Arrays.asList(array));
-        List<String> arrayCal = new ArrayList<String>(Arrays.asList(cal));
-        
-        while(arrayCal.contains("*")){
-            int index = arrayCal.indexOf("*");
-            arrayCal.remove("*");
-            Integer result = Integer.parseInt(arrayList.get(index-1))*Integer.parseInt(arrayList.get(index));
-            arrayList.set(index-1, result.toString());
-            arrayList.remove(index);
+    public class ListNode {
+        int val;
+        ListNode next;
 
-        }
-        System.out.println(arrayList);
-        System.out.println(arrayCal);
-        int result = Integer.parseInt(arrayList.get(0));
-        int index = 1;
-        for(int i=1; i < arrayCal.size(); i++){
-            if(arrayCal.get(i).equals("+")){
-                result += Integer.parseInt(arrayList.get(index));
-            }else{
-                result -= Integer.parseInt(arrayList.get(index));
-            }
-            index ++;
+        ListNode() {
         }
 
-        System.out.println(result);
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 
+    public static void main(String[] args) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>((o1,o2) -> {
+            if(o1 == o2){
+                return 0;
+            }else if(o1 > o2){
+                return -1;
+            }else{
+                return 1;
+            }
+        });
+        pq.offer(2);
+        pq.offer(3);
+        System.out.println(pq);
+        pq.offer(1);
+        System.out.println(pq);
+        pq.add(9);
+        System.out.println(pq);
+        pq.add(7);
+        System.out.println(pq);
+        System.out.println(pq.poll());
+        System.out.println(pq.poll());
+        System.out.println(pq.poll());
+        System.out.println(pq.poll());
 
+
+    }
+
+   
 }
