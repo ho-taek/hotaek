@@ -27,7 +27,8 @@ public class _973 {
         int[][] array = new int[k][];
 
         for(int i =0; i < points.length; i++){
-            double result = Math.sqrt(points[i][0])+Math.sqrt(points[i][1]);
+            
+            double result = Math.sqrt(((long) points[i][0]*points[i][0])+((long)points[i][1]*points[i][1]));
             pq.add(new Pointer(points[i], result));
         }
         
