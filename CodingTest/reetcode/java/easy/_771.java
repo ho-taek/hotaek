@@ -10,10 +10,18 @@ public class _771 {
     }
 
     public static int numJewelsInStones(String jewels, String stones) {
-        jewels.toLowerCase();
-        stones.toLowerCase();
-
-        System.out.println(jewels);
-        return 0;
+        int count = 0;
+        Set<Character> js = new HashSet<>();
+        for(char j : jewels.toCharArray()){
+            js.add(j);
+        }
+        for(char s : stones.toCharArray()){
+            if(js.contains(s)){
+                count ++;
+            }
+        }
+       
+        
+        return count;
     }
 }
