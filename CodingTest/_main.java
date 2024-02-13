@@ -30,9 +30,6 @@ public class _main {
                 result += tmp[0];
             }
         }
-        Runtime.getRuntime().gc();
-        long usedMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-        System.out.print(usedMemory + " bytes");
         System.out.printf("#%s %s", 1, result);
     }
 
