@@ -1,50 +1,39 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class _main {
 
-    public class ListNode {
-        int val;
-        ListNode next;
+    public static void main(String args[]) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        ListNode() {
+        int n = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int[] array = new int[n];
+
+        int index = 0;
+        while (st.hasMoreTokens()) {
+            array[index] = Integer.parseInt(st.nextToken());
+            index++;
         }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
-    public static void main(String[] args) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>((o1,o2) -> {
-            if(o1 == o2){
-                return 0;
-            }else if(o1 > o2){
-                return -1;
-            }else{
-                return 1;
+        int result = 0;
+        for (int i = 2; i < n - 2; i++) {
+            int leftLeft = array[i] - array[i - 2];
+            int left = array[i] - array[i - 1];
+            int rightRight = array[i] - array[i + 1];
+            int right = array[i] - array[i + 2];
+            if (leftLeft <= 0 || left <= 0 || rightRight <= 0 || right <= 0) {
+                continue;
+            } else {
+                int[] tmp = { leftLeft, left, right, rightRight };
+                Arrays.sort(tmp);
+                result += tmp[0];
             }
-        });
-        pq.offer(2);
-        pq.offer(3);
-        System.out.println(pq);
-        pq.offer(1);
-        System.out.println(pq);
-        pq.add(9);
-        System.out.println(pq);
-        pq.add(7);
-        System.out.println(pq);
-        System.out.println(pq.poll());
-        System.out.println(pq.poll());
-        System.out.println(pq.poll());
-        System.out.println(pq.poll());
-
-
+        }
+        Runtime.getRuntime().gc();
+        long usedMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        System.out.print(usedMemory + " bytes");
+        System.out.printf("#%s %s", 1, result);
     }
 
-   
 }
