@@ -8,29 +8,55 @@ public class _main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int[] array = new int[n];
 
-        int index = 0;
-        while (st.hasMoreTokens()) {
-            array[index] = Integer.parseInt(st.nextToken());
-            index++;
-        }
-        int result = 0;
-        for (int i = 2; i < n - 2; i++) {
-            int leftLeft = array[i] - array[i - 2];
-            int left = array[i] - array[i - 1];
-            int rightRight = array[i] - array[i + 1];
-            int right = array[i] - array[i + 2];
-            if (leftLeft <= 0 || left <= 0 || rightRight <= 0 || right <= 0) {
-                continue;
-            } else {
-                int[] tmp = { leftLeft, left, right, rightRight };
-                Arrays.sort(tmp);
-                result += tmp[0];
+        List<Integer> list = new ArrayList<>();
+
+        int[][] array = new int[100][100];
+        for (int i = 0; i < 100; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            for (int j = 0; j < 100; j++) {
+                array[i][j] = Integer.parseInt(st.nextToken());
+                if (i == 0 && array[i][j] == 1) {
+                    list.add(j);
+                }
             }
         }
-        System.out.printf("#%s %s", 1, result);
+        int result = 0;
+        // 돌림
+        for (int c : list) {
+            // 우측
+            System.out.println(c);
+            int dx = 1;
+            int dy = c;
+            int flag = 0;
+            while (true) {
+                // 우측
+                if ((dy + 1) <= 99 && array[dx][dy + 1] == 1 && (flag == 0 || flag == 1)) {
+                    dy = dy + 1;
+                    flag = 1;
+                } else if (((dy - 1) >= 0) && array[dx][dy - 1] == 1 && (flag == 0 || flag == 2)) {
+                    dy = dy - 1;
+                    flag = 2;
+                }
+
+                if (dx <= 98 && array[dx + 1][dy] == 1 || array[dx + 1][dy] == 2) {
+                    flag = 0;
+                    dx = dx + 1;
+                }
+
+                if (dx == 99) {
+                    if (array[dx][dy] == 2) {
+                        result = c;
+                    }
+                    break;
+                }
+            }
+            if (result != 0) {
+                break;
+            }
+
+        }
+        System.out.println("#" + n + " " + result);
     }
 
 }
