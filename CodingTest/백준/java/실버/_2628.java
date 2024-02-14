@@ -54,8 +54,7 @@ public class _2628 {
         bMax = check;
       }
     }
-    System.out.println(aMax);
-    System.out.println(bMax);
+
     System.out.println(aMax * bMax);
 
   }
