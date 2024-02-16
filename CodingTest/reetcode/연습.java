@@ -9,13 +9,11 @@ public class 연습 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        for (int i = 0; i < 7; i++) {
-            StringTokenizer st = new StringTokenizer(br.readLine(), "");
-            while (st.hasMoreTokens()) {
-                System.out.println("답" + Integer.parseInt(st.nextToken()));
+        Queue<Integer> queue = new LinkedList<>();
 
-            }
-
-        }
+        queue.offer(2);
+        queue.offer(3);
+        System.out.println(queue);
+        System.out.println(queue.poll());
     }
 }
