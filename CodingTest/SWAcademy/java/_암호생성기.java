@@ -13,7 +13,6 @@ public class _암호생성기 {
       Queue<Integer> queue = new LinkedList<>();
 
       // 값 할당
-      System.out.println(st);
       while (st.hasMoreTokens()) {
         queue.add(Integer.parseInt(st.nextToken()));
       }
