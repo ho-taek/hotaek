@@ -3,38 +3,72 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class _Contact {
-  static boolean[] visited;
+  static int[] visited;
   static List<List<Integer>> result;
   static int max = 0;
 
   public static void main(String[] args) throws Exception {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    StringTokenizer st = new StringTokenizer(br.readLine());
 
-    int n = Integer.parseInt(st.nextToken());
-    int m = Integer.parseInt(st.nextToken());
+    for (int t = 1; t <= 10; t++) {
+      StringTokenizer st = new StringTokenizer(br.readLine());
 
-    List<List<Integer>> graph = new ArrayList<>();
+      int n = Integer.parseInt(st.nextToken());
+      int m = Integer.parseInt(st.nextToken());
 
-    StringTokenizer sta = new StringTokenizer(br.readLine());
-    for (int i = 0; i <= 100; i++) {
-      graph.add(new ArrayList<>());
-    }
+      List<List<Integer>> graph = new ArrayList<>();
+      List<List<Integer>> reverse = new ArrayList<>();
 
-    for (int i = 0; i < (n / 2); i++) {
-      int a = Integer.parseInt(sta.nextToken());
-      int b = Integer.parseInt(sta.nextToken());
-      graph.get(a).add(b);
-    }
+      StringTokenizer sta = new StringTokenizer(br.readLine());
+      for (int i = 0; i <= 100; i++) {
+        graph.add(new ArrayList<>());
+        reverse.add(new ArrayList<>());
+      }
 
-    visited = new boolean[101];
-    result = new ArrayList<>();
+      for (int i = 0; i < (n / 2); i++) {
+        int a = Integer.parseInt(sta.nextToken());
+        int b = Integer.parseInt(sta.nextToken());
+        graph.get(a).add(b);
+        reverse.get(b).add(a);
+      }
 
-    Queue<Integer> queue = new LinkedList<>();
-    System.out.println(result);
-    queue.offer(m);
-    visited[m] = true;
-    while (!queue.isEmpty()) {
+      visited = new int[101];
+      result = new ArrayList<>();
+
+      for (int i = 0; i <= 100; i++) {
+        result.add(new ArrayList<>());
+      }
+
+      Queue<Integer> queue = new LinkedList<>();
+      int max = 0;
+      queue.offer(m);
+      visited[m] = 1;
+      while (!queue.isEmpty()) {
+        int q = queue.poll();
+
+        for (int i : graph.get(q)) {
+          if (visited[i] == 0) {
+            queue.offer(i);
+            for (int j : reverse.get(i)) {
+              if (j == q) {
+                if (max < visited[q] + 1) {
+                  max = visited[q] + 1;
+                }
+                visited[i] = visited[q] + 1;
+                result.get(visited[i]).add(i);
+              }
+            }
+          }
+        }
+      }
+      int answer = 0;
+      for (int s : result.get(max)) {
+        if (answer < s) {
+          answer = s;
+        }
+      }
+
+      System.out.println("#" + t + " " + answer);
 
     }
   }
