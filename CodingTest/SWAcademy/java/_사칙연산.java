@@ -40,10 +40,7 @@ public class _사칙연산 {
       }
       for (int j = max; j >= 1; j--) {
         if (map.keySet().contains(j)) {
-          System.out.println("확인");
           String[] value = map.get(j);
-          System.out.println("제이" + " " + j);
-
           int first = tree[Integer.parseInt(value[1])];
           int second = tree[Integer.parseInt(value[2])];
           switch (value[0]) {
@@ -66,8 +63,8 @@ public class _사칙연산 {
           continue;
         }
       }
-      System.out.println(Arrays.toString(tree));
-      System.out.println(tree[1]);
+
+      System.out.println("#" + t + " " + tree[1]);
     }
   }
 }
