@@ -10,53 +10,38 @@ public class _수영장 {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     int T = Integer.parseInt(br.readLine());
 
-    for (int t = 1; t <= 10; t++) {
-      int[] arr = new int[4];
-
+    for (int t = 1; t <= T; t++) {
       StringTokenizer st = new StringTokenizer(br.readLine());
+      int[] array = new int[4];
+
       for (int i = 0; i < 4; i++) {
-        arr[i] = Integer.parseInt(st.nextToken());
+        array[i] = Integer.parseInt(st.nextToken());
       }
 
+      int[] dp = new int[13];
+      int ans = array[3];
       StringTokenizer sty = new StringTokenizer(br.readLine());
-      int[] year = new int[12];
-      for (int i = 0; i < 12; i++) {
-        year[i] = Integer.parseInt(sty.nextToken()) * arr[0];
+      for (int i = 1; i <= 12; i++) {
+        dp[i] = Integer.parseInt(sty.nextToken());
       }
 
-      int min = arr[3];
+      dp[1] = (dp[1] * array[0] > array[1]) ? array[1] : dp[1] * array[0];
+      dp[2] = ((dp[2] * array[0]) > array[1]) ? dp[1] + array[1] : (dp[1] + dp[2] * array[0]);
 
-      // 일 -> 월
-      for (int i = 0; i < 12; i++) {
-        if (year[i] > arr[1]) {
-          year[i] = arr[1];
-        }
+      for (int i = 3; i <= 12; i++) {
+        int day = dp[i - 1] + (dp[i] * array[0]);
+        int month = dp[i - 1] + array[1];
+        int three = dp[i - 3] + array[2];
+        int[] num = { day, month, three };
+        Arrays.sort(num);
+        dp[i] = num[0];
       }
-      int value = Arrays.stream(year).sum();
-      if (min > value) {
-        min = value;
-      }
 
-      // 월 -> 일
-      for (int i = 0; i < 10; i++) {
-        int[] copy = year.clone();
+      ans = (array[3] > dp[12]) ? dp[12] : array[3];
 
-        for (int j = i; j < 10; j += 2) {
-          int tmp = copy[j] + copy[j + 1] + copy[j + 2];
-          if (tmp > arr[2]) {
-            copy[j] = arr[2];
-            copy[j + 1] = 0;
-            copy[j + 2] = 0;
-          }
+      System.out.println("#" + t + " " + ans);
 
-        }
-
-        int valueTmp = Arrays.stream(copy).sum();
-        if (min > valueTmp) {
-          min = valueTmp;
-        }
-      }
-      System.out.println("#" + t + " " + min);
     }
+
   }
 }
