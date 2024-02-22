@@ -35,8 +35,16 @@ public class _2468 {
       }
     }
     int maxValue = 0;
-    for (int i = 0; i < max; i++) {
-      int[][] graphCopy = copy(graph);
+
+    for (int i = 1; i <= max; i++) {
+      int[][] graphCopy = new int[n][n];
+
+      for (int j = 0; j < n; j++) {
+        for (int r = 0; r < n; r++) {
+          graphCopy[j][r] = graph[j][r];
+        }
+      }
+
       int answer = 0;
       for (int a = 0; a < n; a++) {
         for (int b = 0; b < n; b++) {
@@ -49,14 +57,6 @@ public class _2468 {
       maxValue = (answer > maxValue) ? answer : maxValue;
     }
     System.out.println(maxValue);
-  }
-
-  public static int[][] copy(int[][] src) {
-    if (src == null) {
-      return null;
-    }
-
-    return Arrays.stream(src).map(int[]::clone).toArray(int[][]::new);
   }
 
   public static int bfs(Node node, int m, int check, int[][] graph) {
