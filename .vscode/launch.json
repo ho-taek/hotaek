@@ -1,0 +1,490 @@
+{
+  // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+  // 기존 특성에 대한 설명을 보려면 가리킵니다.
+  // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "_2573",
+      "request": "launch",
+      "mainClass": "백준.java.골드._2573",
+      "projectName": "hotaek_78e33f95"
+    },
+    {
+      "type": "java",
+      "name": "Solution",
+      "request": "launch",
+      "mainClass": "Solution",
+      "projectName": "hotaek_78e33f95"
+    },
+    {
+      "type": "java",
+      "name": "_등산로조성",
+      "request": "launch",
+      "mainClass": "_등산로조성",
+      "projectName": "hotaek_78e33f95"
+    },
+    {
+      "type": "java",
+      "name": "_2589",
+      "request": "launch",
+      "mainClass": "백준.java.골드._2589",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "_Contact",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._Contact",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_미로1",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._미로1",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_사칙연산",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._사칙연산",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_사칙연산_유효성_검사",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._사칙연산_유효성_검사",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_수영장",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._수영장",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_숫자만들기",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._숫자만들기",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_암호생성기",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._암호생성기",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_정사각형방",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._정사각형방",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_중위순회",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._중위순회",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_최빈수구하기",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._최빈수구하기",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "Solution",
+      "request": "launch",
+      "mainClass": "Solution",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_1",
+      "request": "launch",
+      "mainClass": "reetcode.java.easy._1",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_125",
+      "request": "launch",
+      "mainClass": "reetcode.java.easy._125",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_20",
+      "request": "launch",
+      "mainClass": "reetcode.java.easy._20",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_21",
+      "request": "launch",
+      "mainClass": "reetcode.java.easy._21",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_344",
+      "request": "launch",
+      "mainClass": "reetcode.java.easy._344",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_561",
+      "request": "launch",
+      "mainClass": "reetcode.java.easy._561",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_771",
+      "request": "launch",
+      "mainClass": "reetcode.java.easy._771",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_819",
+      "request": "launch",
+      "mainClass": "reetcode.java.easy._819",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_200",
+      "request": "launch",
+      "mainClass": "reetcode.java.medium._200",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_238",
+      "request": "launch",
+      "mainClass": "reetcode.java.medium._238",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_49",
+      "request": "launch",
+      "mainClass": "reetcode.java.medium._49",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_5",
+      "request": "launch",
+      "mainClass": "reetcode.java.medium._5",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_739",
+      "request": "launch",
+      "mainClass": "reetcode.java.medium._739",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_937",
+      "request": "launch",
+      "mainClass": "reetcode.java.medium._937",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_973",
+      "request": "launch",
+      "mainClass": "reetcode.java.medium._973",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "연습",
+      "request": "launch",
+      "mainClass": "reetcode.연습",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2573",
+      "request": "launch",
+      "mainClass": "백준.java.골드._2573",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2636_bfs",
+      "request": "launch",
+      "mainClass": "백준.java.골드._2636_bfs",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2636_dfs",
+      "request": "launch",
+      "mainClass": "백준.java.골드._2636_dfs",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_9949",
+      "request": "launch",
+      "mainClass": "백준.java.골드._9949",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_1009",
+      "request": "launch",
+      "mainClass": "백준.java.브론즈._1009",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_10988",
+      "request": "launch",
+      "mainClass": "백준.java.브론즈._10988",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_10989",
+      "request": "launch",
+      "mainClass": "백준.java.브론즈._10989",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_1152",
+      "request": "launch",
+      "mainClass": "백준.java.브론즈._1152",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_1157",
+      "request": "launch",
+      "mainClass": "백준.java.브론즈._1157",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_1546",
+      "request": "launch",
+      "mainClass": "백준.java.브론즈._1546",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2869",
+      "request": "launch",
+      "mainClass": "백준.java.브론즈._2869",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_4344",
+      "request": "launch",
+      "mainClass": "백준.java.브론즈._4344",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_10973",
+      "request": "launch",
+      "mainClass": "백준.java.실버._10973",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_11659",
+      "request": "launch",
+      "mainClass": "백준.java.실버._11659",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_1181",
+      "request": "launch",
+      "mainClass": "백준.java.실버._1181",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_1244",
+      "request": "launch",
+      "mainClass": "백준.java.실버._1244",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_1427",
+      "request": "launch",
+      "mainClass": "백준.java.실버._1427",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_15649",
+      "request": "launch",
+      "mainClass": "백준.java.실버._15649",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_17086",
+      "request": "launch",
+      "mainClass": "백준.java.실버._17086",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_1764",
+      "request": "launch",
+      "mainClass": "백준.java.실버._1764",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_1929",
+      "request": "launch",
+      "mainClass": "백준.java.실버._1929",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2407",
+      "request": "launch",
+      "mainClass": "백준.java.실버._2407",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2468",
+      "request": "launch",
+      "mainClass": "백준.java.실버._2468",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2477",
+      "request": "launch",
+      "mainClass": "백준.java.실버._2477",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2559",
+      "request": "launch",
+      "mainClass": "백준.java.실버._2559",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2578",
+      "request": "launch",
+      "mainClass": "백준.java.실버._2578",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2628",
+      "request": "launch",
+      "mainClass": "백준.java.실버._2628",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2667",
+      "request": "launch",
+      "mainClass": "백준.java.실버._2667",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2669",
+      "request": "launch",
+      "mainClass": "백준.java.실버._2669",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2751",
+      "request": "launch",
+      "mainClass": "백준.java.실버._2751",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_2960",
+      "request": "launch",
+      "mainClass": "백준.java.실버._2960",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_순열",
+      "request": "launch",
+      "mainClass": "알고리즘._순열",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "버블정렬",
+      "request": "launch",
+      "mainClass": "알고리즘.버블정렬",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "삽입정렬",
+      "request": "launch",
+      "mainClass": "알고리즘.삽입정렬",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "선택정렬",
+      "request": "launch",
+      "mainClass": "알고리즘.선택정렬",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "위상정렬_BFS",
+      "request": "launch",
+      "mainClass": "알고리즘.위상정렬_BFS",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_더맵게",
+      "request": "launch",
+      "mainClass": "프로그래머스.java.Lv2._더맵게",
+      "projectName": "hotaek_8e182f63"
+    }
+  ]
+}
