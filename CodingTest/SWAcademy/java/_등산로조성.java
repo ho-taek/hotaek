@@ -45,6 +45,7 @@ public class _등산로조성 {
           graph[i][j] = Integer.parseInt(sta.nextToken());
           if (graph[i][j] > check) {
             check = graph[i][j];
+            
           }
         }
       }

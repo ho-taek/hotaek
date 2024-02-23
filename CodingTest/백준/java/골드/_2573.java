@@ -13,6 +13,7 @@ public class _2573 {
   static int[] dx = { 0, 0, -1, 1 };
   static int[] dy = { -1, 1, 0, 0 };
   static int time = 0;
+  static int answer = 0;
 
   static class Node {
     int x, y;
@@ -39,8 +40,8 @@ public class _2573 {
       }
     }
     boolean flag = true;
-    while (flag) {
-      int answer = 0;
+    while (true) {
+      answer = 0;
       time++;
       for (int i = 0; i < n; i++) {
         Arrays.fill(visited[i], false);
@@ -55,19 +56,18 @@ public class _2573 {
       }
 
       change(n, m);
-
-      if (getCount(n, m) == n * m) {
+      if (answer >= 2) {
+        break;
+      }
+      if (getCount(n, m) == (n * m)) {
         flag = false;
         answer = 0;
         break;
       }
-      if (answer >= 2) {
-        flag = false;
-        break;
-      }
 
     }
-    System.out.println(time - 1);
+    time = (!flag) ? 0 : time - 1;
+    System.out.println(time);
   }
 
   public static void bfs(Node start, int n, int m) {
