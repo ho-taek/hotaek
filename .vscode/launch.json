@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_1010",
+      "request": "launch",
+      "mainClass": "백준.java.실버._1010",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
       "name": "_2589",
       "request": "launch",
       "mainClass": "백준.java.골드._2589",
