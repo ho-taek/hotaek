@@ -84,9 +84,5 @@ public class _14502 {
             return graph;
     }
 
-    public static int getDepth(int[][] graph, Node start){
-        for(int i=0; i< 4; i++){
 
-        }
-    }
 }
