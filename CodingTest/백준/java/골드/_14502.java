@@ -3,8 +3,6 @@ package 백준.java.골드;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.StringTokenizer;
 import java.util.*;
 public class _14502 {
     static boolean[][] wall;
@@ -13,6 +11,9 @@ public class _14502 {
     static int[] dx = {0,0,-1,1};
     static int[] dy = {-1,1,0,0};
     static List<Node> nodeList;
+    static boolean[][] visited;
+    static int max;
+    static int[][] tmpGraph;
     static class Node{
         int x,y;
         public Node(int x, int y){
@@ -37,21 +38,41 @@ public class _14502 {
             StringTokenizer sta = new StringTokenizer(br.readLine());
             for(int c=0; c < col; c++){
                 int value = Integer.parseInt(sta.nextToken());
-                graph[r][c] = value ;
+                graph[r][c] = value;
                 wall[r][c] = (value == 0) ? false : true;
                 if(value == 2){
                     nodeList.add(new Node(r,c));
                 }
             }
         }
+        tmpGraph = new int[row][col];
+        max = Integer.MIN_VALUE;
+        dfs(0, graph, wall);
+
+        System.out.println(max);
+        
     }
 
     public static void dfs(int depth, int[][] graph, boolean[][] wall){
+  
         if(depth == 3){
-            for(Node node : nodeList){
-                int[][] tmp = graphChange(graph, node, wall);
-
+            visited = new boolean[row][col];
+            for(int i=0; i < row; i++){
+                for(int j=0; j <col; j++){
+                    tmpGraph[i][j] = graph[i][j];
+                }
             }
+            for(Node node : nodeList){
+                tmpGraph = graphChange(tmpGraph, node, wall);
+            }
+
+            System.out.println("확인여");
+            for(int i=0; i< row; i++){
+                System.out.println(Arrays.toString(tmpGraph[i]));
+            }
+            System.out.println();
+
+            getCount(tmpGraph);
             return;
         }
 
@@ -63,6 +84,7 @@ public class _14502 {
                     dfs(depth+1, graph, wall);
                     wall[r][c] = false;
                     graph[r][c] = 0;
+               
                 }
             }
         }
@@ -75,7 +97,6 @@ public class _14502 {
     
                 if(nx >=0 && nx < row && ny >=0 && ny < col){
                     if(graph[nx][ny] == 0){
-                        wall[nx][ny] = true;
                         graph[nx][ny] = 2;
                         graphChange(graph, new Node(nx,ny), wall);
                     }
@@ -84,5 +105,46 @@ public class _14502 {
             return graph;
     }
 
+<<<<<<< Updated upstream
 
+=======
+    public static void getCount(int[][] graph){
+        boolean[][] visited = new boolean[row][col];
+        for(int i =0; i < row ; i++){
+            for(int j=0; j < col ; j++){
+                if(graph[i][j] == 0 && !visited[i][j]){
+                    int result = bfs(graph, new Node(i,j));
+                    if(max < result){
+                        max = result;
+                    }
+                }
+            }
+        }
+    }
+
+    public static int bfs(int[][] graph, Node start){
+        int tmp = 0;
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(start);
+        visited[start.x][start.y] = true;
+
+        while(!queue.isEmpty()){
+            Node q = queue.poll();
+
+            for(int i=0; i < 4; i++){
+                int nx = q.x + dx[i];
+                int ny = q.y + dy[i];
+                if(nx >= 0 && nx < row && ny >= 0 && ny < col){
+                    if(!visited[nx][ny] && graph[nx][ny] == 0){
+                        queue.offer(new Node(nx,ny));
+                        visited[nx][ny] = true;
+                        tmp ++;
+                    }
+                }
+            }
+
+        }
+        return tmp;
+    }
+>>>>>>> Stashed changes
 }
