@@ -38,9 +38,6 @@ public class _16234 {
         int day = 0;
         while(!flag){
             flag = true;
-            for(int i=0; i < n; i++){
-                System.out.println(Arrays.toString(graph[i]));
-            }
             visited = new boolean[n][n];
             for(int i=0; i <n; i++){
                 for(int j=0; j <n; j++){
