@@ -4,10 +4,10 @@ import java.util.*;
 
 public class Solution {
     public static void main(String[] args) {
-        HashSet<Integer> setA = new HashSet<>();
-        setA.add(1);
-        setA.add(2);
-        setA.add(3);
+        int[] a = { 1, 2 };
+        int[] b = { 1, 2 };
 
+        System.out.println(a.equals(b));
     }
+
 }
