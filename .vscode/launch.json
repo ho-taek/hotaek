@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_모의sw_미생물격리",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._모의sw_미생물격리",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
       "name": "_17531",
       "request": "launch",
       "mainClass": "백준.java.골드._17531",
