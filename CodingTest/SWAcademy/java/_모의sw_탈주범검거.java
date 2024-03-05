@@ -37,9 +37,7 @@ public class _모의sw_탈주범검거 {
                     graph[i][j] = Integer.parseInt(stg.nextToken());
                 }
             }
-            // for (int i = 0; i < n; i++) {
-            // System.out.println(Arrays.toString(graph[i]));
-            // }
+
             dfs(sr, sc, 1);
             int result = 0;
             for (int i = 0; i < n; i++) {
@@ -49,10 +47,6 @@ public class _모의sw_탈주범검거 {
                     }
                 }
             }
-
-            // for (int i = 0; i < n; i++) {
-            // System.out.println(Arrays.toString(visited[i]));
-            // }
 
             System.out.println("#" + t + " " + result);
 
