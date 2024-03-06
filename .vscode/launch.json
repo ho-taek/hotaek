@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_2110",
+      "request": "launch",
+      "mainClass": "백준.java.골드._2110",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
       "name": "_점심_식사시간",
       "request": "launch",
       "mainClass": "SWAcademy.java._점심_식사시간",
