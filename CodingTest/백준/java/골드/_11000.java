@@ -45,7 +45,6 @@ public class _11000 {
                 pq.offer(array[i + 1][1]);
             }
         }
-        System.out.println(pq);
         System.out.println(pq.size());
     }
 
