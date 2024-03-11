@@ -1,0 +1,21 @@
+/**
+날짜 부분에서 어려움을 느낀 문제!
+DATE_FORMAT, DATEDIFF 기억 필요
+CASE WHEN 조건 THEN
+ELSE
+END
+이것도 mysql에서 쓰이는 조건문들에 대해 이해 필요
+**/
+
+
+SELECT HISTORY_ID, CAR_ID, 
+DATE_FORMAT(START_DATE, "%Y-%m-%d") as START_DATE
+, DATE_FORMAT(END_DATE, "%Y-%m-%d") as END_DATE,
+case WHEN DATEDIFF(END_DATE, START_DATE) >= 29
+THEN '장기 대여'
+ELSE '단기 대여'
+END as RENT_TYPE
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+WHERE START_DATE LIKE "2022-09%"
+order by history_id desc;
+
