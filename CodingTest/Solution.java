@@ -4,10 +4,16 @@ import java.util.*;
 
 public class Solution {
     public static void main(String[] args) {
-        int[] a = { 1, 2 };
-        int[] b = { 1, 2 };
 
-        System.out.println(a.equals(b));
+    }
+
+    public void dfs(List<String> results, Map<String, PriorityQueue<String>> fromToMap, String from) {
+
+        while (fromToMap.containsKey(from) && !fromToMap.get(from).isEmpty()) {
+            dfs(results, fromToMap, fromToMap.get(from).poll());
+        }
+        results.add(0, from);
+
     }
 
 }

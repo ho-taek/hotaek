@@ -1,0 +1,11 @@
+/**
+DATE관련 내용에 대해 알고 있으면 쉽게 풀 수 있는 문제
+이제 LIKE 관련해서도 어느 정도 적응한 느낌
+**/
+
+SELECT BOOK_ID, DATE_FORMAT(PUBLISHED_DATE, '%Y-%m-%d') as PUBLISHED_DATE
+FROM BOOK
+WHERE PUBLISHED_DATE LIKE '2021%'
+AND CATEGORY = '인문'
+ORDER BY PUBLISHED_DATE
+;
