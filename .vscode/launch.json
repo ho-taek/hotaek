@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_단순이진암호코드",
+      "request": "launch",
+      "mainClass": "_단순이진암호코드",
+      "projectName": "hotaek_9ddbe36a"
+    },
+    {
+      "type": "java",
+      "name": "_암호코드스캔",
+      "request": "launch",
+      "mainClass": "_암호코드스캔",
+      "projectName": "hotaek_9ddbe36a"
+    },
+    {
+      "type": "java",
       "name": "_2110",
       "request": "launch",
       "mainClass": "백준.java.골드._2110",
