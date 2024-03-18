@@ -1,0 +1,5 @@
+/**
+ROUND 사용법 및 IFNULL을 통해 NULL 조건을 대입하는 것에 대한 배움!!
+*//
+SELECT  ROUND(AVG(IFNULL(LENGTH, '10')),2) as AVERAGE_LENGTH
+FROM FISH_INFO
