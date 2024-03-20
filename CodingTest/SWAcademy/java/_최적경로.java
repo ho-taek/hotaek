@@ -48,7 +48,6 @@ public class _최적경로 {
   public static void dfs(boolean[] visited, int depth, int tmp, Node node ){
     if(depth == n){
       tmp += cal(node.x,node.y, home.x, home.y);
-      System.out.println(tmp);
       if(tmp < result){
         result = tmp;
       }
