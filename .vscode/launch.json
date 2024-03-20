@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_최적경로",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._최적경로",
+      "projectName": "hotaek_9ddbe36a"
+    },
+    {
+      "type": "java",
+      "name": "_동철이의일분배",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._동철이의일분배",
+      "projectName": "hotaek_9ddbe36a"
+    },
+    {
+      "type": "java",
       "name": "Solution",
       "request": "launch",
       "mainClass": "Solution",
