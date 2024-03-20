@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_최적경로",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._최적경로",
+      "projectName": "hotaek_9ddbe36a"
+    },
+    {
+      "type": "java",
+      "name": "_동철이의일분배",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._동철이의일분배",
+      "projectName": "hotaek_9ddbe36a"
+    },
+    {
+      "type": "java",
+      "name": "Solution",
+      "request": "launch",
+      "mainClass": "Solution",
+      "projectName": "hotaek_9ddbe36a"
+    },
+    {
+      "type": "java",
+      "name": "_최대상금",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._최대상금",
+      "projectName": "hotaek_9ddbe36a"
+    },
+    {
+      "type": "java",
+      "name": "_104",
+      "request": "launch",
+      "mainClass": "reetcode.java.easy._104",
+      "projectName": "hotaek_9ddbe36a"
+    },
+    {
+      "type": "java",
       "name": "_단순이진암호코드",
       "request": "launch",
       "mainClass": "_단순이진암호코드",
