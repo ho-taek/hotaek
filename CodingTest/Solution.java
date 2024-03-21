@@ -1,29 +1,15 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.*;
 
 public class Solution {
+    static boolean[] visited;
     public static void main(String[] args) {
-        PriorityQueue<String> queue = new PriorityQueue<>();
-
-        queue.add("123");
-        queue.add("244");
-        queue.add("32");
-        queue.add("155");
-        System.out.println(queue);
-
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
+      double a = 1.46;
+      System.out.println(Math.round(a));
     }
 
-    public void dfs(List<String> results, Map<String, PriorityQueue<String>> fromToMap, String from) {
-
-        while (fromToMap.containsKey(from) && !fromToMap.get(from).isEmpty()) {
-            dfs(results, fromToMap, fromToMap.get(from).poll());
-        }
-        results.add(0, from);
+    public void dfs(){
+        visited[2] = true;
 
     }
 
