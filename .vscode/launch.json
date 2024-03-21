@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_창용마을무리의개수",
+      "request": "launch",
+      "mainClass": "_창용마을무리의개수",
+      "projectName": "hotaek_9ddbe36a"
+    },
+    {
+      "type": "java",
       "name": "_최적경로",
       "request": "launch",
       "mainClass": "SWAcademy.java._최적경로",
