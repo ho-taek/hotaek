@@ -31,7 +31,6 @@ public class _창용마을무리의개수 {
 
       for(int i=1; i< n+1; i++){
         if(!visited[i]){
-          System.out.println(i);
           result ++;
           bfs(i);
         }
@@ -50,7 +49,6 @@ public class _창용마을무리의개수 {
 
       for(int i : graph.get(q)){
         if(!visited[i]){
-          System.out.println(Arrays.toString(visited));
           visited[i] = true;
           queue.offer(i);
         }
