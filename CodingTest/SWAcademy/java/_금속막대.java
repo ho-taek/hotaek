@@ -43,7 +43,6 @@ public class _금속막대 {
           sb.append(" "+array[xMap.get(start)][0]);
           sb.append(" "+array[xMap.get(start)][1]);
           start = array[xMap.get(start)][1];
-          System.out.println(start);
         }
       }
       System.out.println("#"+t+sb);
