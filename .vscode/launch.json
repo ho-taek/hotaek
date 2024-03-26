@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_보급로",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._보급로",
+      "projectName": "hotaek_9ddbe36a"
+    },
+    {
+      "type": "java",
+      "name": "_수영대회결승전",
+      "request": "launch",
+      "mainClass": "SWAcademy.java._수영대회결승전",
+      "projectName": "hotaek_9ddbe36a"
+    },
+    {
+      "type": "java",
       "name": "_1197",
       "request": "launch",
       "mainClass": "백준.java.골드._1197",
