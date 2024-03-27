@@ -56,15 +56,11 @@ public class _요리사 {
       }
       return;
     }
-
         visited[start] = true;
         comb(start+1, r-1, n);
         visited[start] = false;
         comb(start+1, r, n);
-      
-
       }
-
 
 
   public static int calc(int[] arrayF, int[] arrayT){
