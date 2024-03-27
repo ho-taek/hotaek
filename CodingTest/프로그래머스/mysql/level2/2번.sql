@@ -1,0 +1,11 @@
+SELECT COUNT(*) as FISH_COUNT, MONTH(TIME) as MONTH
+FROM FISH_INFO
+GROUP BY MONTH(TIME)
+HAVING COUNT(*) > 0
+ORDER BY MONTH(TIME)
+
+
+/**
+MONTH라는 함수 사용법을 몰라서 풀지 못했다.
+HAVING에 관해서도 대략 알게 되었음!
+*//
