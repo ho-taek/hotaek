@@ -63,7 +63,6 @@ public class _1674 {
         int total = 0;
         while (!pq.isEmpty()) {
             Edge edge = pq.poll();
-            System.out.println(edge);
             int v = edge.w;
             int cost = edge.weight;
 
