@@ -3,6 +3,9 @@ package 백준.java.실버;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class _2579 {
     static int[][] dp;
@@ -12,6 +15,7 @@ public class _2579 {
         int n = Integer.parseInt(br.readLine());
 
         dp = new int[n + 1][3];
+
         // dp 그래프
         for (int i = 1; i <= n; i++) {
             dp[i][0] = Integer.parseInt(br.readLine());
@@ -27,8 +31,8 @@ public class _2579 {
                 dp[2][2] = dp[2][0];
             }
             if (i >= 3) {
-              dp[i][1] = dp[i-1][2] + dp[i][0];
-              dp[i][2] = Math.max(dp[i-2][1], dp[i-2][2]) + dp[i][0];
+                dp[i][1] = dp[i - 1][2] + dp[i][0];
+                dp[i][2] = Math.max(dp[i - 2][1], dp[i - 2][2]) + dp[i][0];
             }
         }
 
