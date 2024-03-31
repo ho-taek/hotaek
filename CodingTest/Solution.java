@@ -3,24 +3,27 @@ import java.util.*;
 
 public class Solution {
 
-    public static void main(String[] args) {
-        // System.out.println("0 ~ 100 사이의 난수 1개 발생 : " + (int) (Math.random() * 30));
+    public static void main(String[] args) throws IOException {
+        System.out.println("0 ~ 100 사이의 난수 1개 발생 : " + (int) (Math.random() * 11));
+    }
 
-      boolean[] visited = new boolean[4];
+    // public static void perm(int depth , boolean[] array, boolean[] output, int r, int n){
+    //   if(depth == r){
+    //     System.out.println(Arrays.toString(output));
+    //     return;
+    //   }
+
+    //   for(int i =0; i <n ; i++){
+    //     output[depth] = true;
+    //     perm(depth+1, array, output, r, n);
+    //     output[depth] = false;
+    //     perm(depth+1, array, output, r, n);
 
 
-      comb(visited, 0,4);
+    //   }
+
+
+
     }
   
-    public static void comb(boolean[] visited, int idx, int n){
-      if(idx == n){
-        System.out.println(Arrays.toString(visited));
-        return;
-      }
-      visited[idx] = true;
-      comb(visited, idx+1, n);
-      visited[idx] = false;
-      comb(visited, idx+1, n);
-    }
 
-}
