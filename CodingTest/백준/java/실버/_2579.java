@@ -15,6 +15,7 @@ public class _2579 {
         int n = Integer.parseInt(br.readLine());
 
         dp = new int[n + 1][3];
+        List<Integer> li = new ArrayList<>();
 
         // dp 그래프
         for (int i = 1; i <= n; i++) {
