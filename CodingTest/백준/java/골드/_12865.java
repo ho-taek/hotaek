@@ -47,7 +47,6 @@ public class _12865 {
                 }
 
             }
-            System.out.println(Arrays.toString(dp[i]));
         }
 
         System.out.println(dp[n][k]);
