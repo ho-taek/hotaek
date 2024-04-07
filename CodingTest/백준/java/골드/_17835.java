@@ -3,88 +3,106 @@ package 백준.java.골드;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class _17835 {
-    static int[][] graph;
-    static final int INF = 100001;
+
+    static List<List<Node>> graph;
+    static int[] result;
+    static int INF = Integer.MAX_VALUE;
+    static List<Integer> city;
+
+    static class Node implements Comparable<Node> {
+        int dist, cost;
+
+        public Node(int dist, int cost) {
+            this.dist = dist;
+            this.cost = cost;
+        }
+
+        @Override
+        public int compareTo(Node o) {
+            return this.cost - o.cost;
+        }
+    }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
         int k = Integer.parseInt(st.nextToken());
+        graph = new ArrayList<>();
+        for (int i = 0; i <= n; i++) {
+            graph.add(new ArrayList<>());
+        }
 
-        graph = new int[n + 1][n + 1];
-        // 무한으로 전체 그래프 초기화
-        for (int i = 1; i < (n + 1); i++) {
-            Arrays.fill(graph[i], INF);
-        }
-        // 자기 자신 0으로 넣기
-        for (int i = 1; i < (n + 1); i++) {
-            graph[i][i] = 0;
-        }
-        // 그래프에 값(도로 길이) 넣기
         for (int i = 0; i < m; i++) {
-            st = new StringTokenizer(br.readLine());
-            int u = Integer.parseInt(st.nextToken());
-            int v = Integer.parseInt(st.nextToken());
-            int c = Integer.parseInt(st.nextToken());
-            graph[u][v] = c;
+            StringTokenizer stg = new StringTokenizer(br.readLine());
+            int from = Integer.parseInt(stg.nextToken());
+            int to = Integer.parseInt(stg.nextToken());
+            int cost = Integer.parseInt(stg.nextToken());
+            graph.get(to).add(new Node(from, cost));
         }
 
-        // 면접장 도시
-        st = new StringTokenizer(br.readLine());
-        int[] city = new int[k];
+        city = new ArrayList<>();
+
+        StringTokenizer sta = new StringTokenizer(br.readLine());
+        for (int i = 0; i < k; i++) {
+            city.add(Integer.parseInt(sta.nextToken()));
+        }
+
+        result = new int[n + 1];
+        Arrays.fill(result, INF);
 
         for (int i = 0; i < k; i++) {
-            city[i] = Integer.parseInt(st.nextToken());
+            dijkstra(city.get(i), n);
+        }
+        int resultCity = 0;
+        int resultDist = 0;
+        for (int i = 1; i <= n; i++) {
+            if (resultDist < result[i]) {
+                resultDist = result[i];
+                resultCity = i;
+            }
+        }
+
+        System.out.println(resultCity + "\n" + resultDist);
+    }
+
+    public static void dijkstra(int start, int n) {
+
+        boolean[] check = new boolean[n + 1];
+
+        int[] dist = new int[n + 1];
+
+        Arrays.fill(dist, INF);
+
+        dist[start] = 0;
+        PriorityQueue<Node> pq = new PriorityQueue<>();
+        pq.offer(new Node(start, 0));
+
+        while (!pq.isEmpty()) {
+            int nowVertex = pq.poll().dist;
+
+            if (check[nowVertex])
+                continue;
+            check[nowVertex] = true;
+
+            for (Node next : graph.get(nowVertex)) {
+                if (dist[next.dist] > dist[nowVertex] + next.cost) {
+                    dist[next.dist] = dist[nowVertex] + next.cost;
+                    pq.offer(new Node(next.dist, dist[next.dist]));
+                }
+
+            }
         }
 
         for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n; j++) {
-                for (int c = 1; c <= n; c++) {
-                    if (graph[i][j] > graph[i][c] + graph[c][j]) {
-                        graph[i][j] = graph[i][c] + graph[c][j];
-                    }
-
-                }
+            if (result[i] > dist[i]) {
+                result[i] = dist[i];
             }
         }
-
-        for (int i = 0; i <= n; i++) {
-            System.out.println(Arrays.toString(graph[i]));
-        }
-
-        // 결과 도시
-        int resultCity = INF;
-        // 가장 먼 도로 길이
-        int bigRoad = 0;
-        int[] tmpCheck = new int[2];
-        for (int i = 1; i <= n; i++) {
-            tmpCheck[0] = INF;
-            tmpCheck[1] = 0;
-            for (int j = 0; j < k; j++) {
-                if (tmpCheck[0] >= graph[i][j]) {
-                    tmpCheck[0] = graph[i][j];
-                    tmpCheck[1] = i;
-                }
-            }
-
-            if (bigRoad < tmpCheck[0]) {
-                bigRoad = tmpCheck[0];
-                resultCity = tmpCheck[1];
-            } else if (bigRoad == tmpCheck[0] && tmpCheck[1] < resultCity) {
-                resultCity = tmpCheck[1];
-            }
-        }
-        System.out.println(resultCity + "\n" + bigRoad);
-        br.close();
     }
 }
