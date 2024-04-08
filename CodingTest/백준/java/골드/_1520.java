@@ -52,11 +52,6 @@ public class _1520 {
     }
 
     public static int dfs(Node start) {
-        System.out.println(start.x + " " + start.y);
-        for (int a = 0; a < n; a++) {
-            System.out.println(Arrays.toString(dp[a]));
-        }
-        System.out.println();
 
         if (start.x == n - 1 && start.y == m - 1) {
             return 1;

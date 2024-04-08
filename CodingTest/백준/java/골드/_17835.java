@@ -8,21 +8,21 @@ import java.util.*;
 public class _17835 {
 
     static List<List<Node>> graph;
-    static int[] result;
-    static int INF = Integer.MAX_VALUE;
+    static long INF = Long.MAX_VALUE;
     static List<Integer> city;
 
     static class Node implements Comparable<Node> {
-        int dist, cost;
+        int dist;
+        long cost;
 
-        public Node(int dist, int cost) {
+        public Node(int dist, long cost) {
             this.dist = dist;
             this.cost = cost;
         }
 
         @Override
         public int compareTo(Node o) {
-            return this.cost - o.cost;
+            return (int) (this.cost - o.cost);
         }
     }
 
@@ -48,22 +48,25 @@ public class _17835 {
 
         city = new ArrayList<>();
 
+        PriorityQueue<Node> queue = new PriorityQueue<>();
+        long[] dist = new long[n + 1];
+
+        Arrays.fill(dist, INF);
+
         StringTokenizer sta = new StringTokenizer(br.readLine());
         for (int i = 0; i < k; i++) {
-            city.add(Integer.parseInt(sta.nextToken()));
+            int a = Integer.parseInt(sta.nextToken());
+            queue.offer(new Node(a, 0));
+            dist[a] = 0;
         }
 
-        result = new int[n + 1];
-        Arrays.fill(result, INF);
+        dijkstra(n, queue, dist);
 
-        for (int i = 0; i < k; i++) {
-            dijkstra(city.get(i), n);
-        }
         int resultCity = 0;
-        int resultDist = 0;
+        long resultDist = 0;
         for (int i = 1; i <= n; i++) {
-            if (resultDist < result[i]) {
-                resultDist = result[i];
+            if (resultDist < dist[i]) {
+                resultDist = dist[i];
                 resultCity = i;
             }
         }
@@ -71,38 +74,30 @@ public class _17835 {
         System.out.println(resultCity + "\n" + resultDist);
     }
 
-    public static void dijkstra(int start, int n) {
+    public static void dijkstra(int n, PriorityQueue<Node> pq, long[] dist) {
 
         boolean[] check = new boolean[n + 1];
 
-        int[] dist = new int[n + 1];
-
-        Arrays.fill(dist, INF);
-
-        dist[start] = 0;
-        PriorityQueue<Node> pq = new PriorityQueue<>();
-        pq.offer(new Node(start, 0));
-
         while (!pq.isEmpty()) {
-            int nowVertex = pq.poll().dist;
+            Node q = pq.poll();
+            int nowVertex = q.dist;
+            long nowWeight = q.cost;
 
             if (check[nowVertex])
                 continue;
             check[nowVertex] = true;
 
+            if (nowWeight > dist[nowVertex]) {
+                continue;
+            }
+
             for (Node next : graph.get(nowVertex)) {
                 if (dist[next.dist] > dist[nowVertex] + next.cost) {
                     dist[next.dist] = dist[nowVertex] + next.cost;
-                    pq.offer(new Node(next.dist, dist[next.dist]));
                 }
-
+                pq.offer(new Node(next.dist, dist[next.dist]));
             }
         }
 
-        for (int i = 1; i <= n; i++) {
-            if (result[i] > dist[i]) {
-                result[i] = dist[i];
-            }
-        }
     }
 }
