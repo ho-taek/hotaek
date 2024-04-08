@@ -1,0 +1,18 @@
+/**
+서브 쿼리 사용시 WITH에 대해 알 수 있는 문제
+**/
+
+
+WITH grade AS(
+    SELECT  SUM(SCORE) as SCORE, EMP_NO
+    FROM HR_GRADE
+    WHERE YEAR LIKE '2022'
+    GROUP BY EMP_NO
+)
+
+SELECT g.SCORE, g.EMP_NO, he.EMP_NAME, he.POSITION, he.EMAIL
+FROM grade g
+INNER JOIN HR_EMPLOYEES as he
+ON g.EMP_NO = he.EMP_NO
+ORDER BY g.SCORE DESC
+LIMIT 1;
