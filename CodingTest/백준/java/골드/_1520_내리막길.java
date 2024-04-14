@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class _1520 {
+public class _1520_내리막길 {
     static int[][] graph;
     static int n;
     static int m;
