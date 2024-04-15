@@ -36,29 +36,29 @@ public class _20366_같이_눈사람_만들자 {
 
         for (int i = 0; i < n; i++) {
             for (int j = (i + 1); j < n; j++) {
-                for (int a = 0; a < n; a++) {
-                    if (a == j)
-                        break;
-                    if (a == i)
-                        continue;
-
-                    for (int b = 0; b < n; b++) {
-                        if (b == i || b == j)
-                            continue;
-
-                        // System.out.println("z " + dp[i][j] + " x " + dp[a][b]);
-                        int value = Math.abs(dp[i][j] - dp[a][b]);
-                        if (result > value) {
-                            // System.out.println(value);
-                            result = value;
-                        } else {
-                            break;
-                        }
-                    }
+                int anaLeft = i;
+                int anaRight = i;
+                while(anaLeft < (n-1) && anaLeft == i || anaLeft == j){
+                        anaLeft++;
+                }
+                while(anaRight < (n-1) && anaRight == i || anaRight == j || anaRight == anaLeft){
+                        anaRight ++;
+                    
+                }
+                System.out.println(anaLeft + " abc " + anaRight);
+                int tmp = calc(dp[i][j], anaLeft,anaRight, dp);
+                if(result < tmp){
+                    break;
+                }else{
+                    System.out.println(anaLeft + " " + anaRight);
+                    result = tmp;
                 }
             }
         }
         System.out.println(result);
+    }
 
+    public static int calc(int elsa, int a, int b, int[][] dp){
+        return Math.abs(elsa - dp[a][b]);
     }
 }

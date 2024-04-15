@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_20366_같이_눈사람_만들자",
+      "request": "launch",
+      "mainClass": "백준.java.골드._20366_같이_눈사람_만들자",
+      "projectName": "hotaek_5c2d340d"
+    },
+    {
+      "type": "java",
+      "name": "_11000",
+      "request": "launch",
+      "mainClass": "백준.java.골드._11000",
+      "projectName": "hotaek_5c2d340d"
+    },
+    {
+      "type": "java",
+      "name": "_12851_숨바꼭질2",
+      "request": "launch",
+      "mainClass": "백준.java.골드._12851_숨바꼭질2",
+      "projectName": "hotaek_5c2d340d"
+    },
+    {
+      "type": "java",
       "name": "_보급로",
       "request": "launch",
       "mainClass": "SWAcademy.java._보급로",
