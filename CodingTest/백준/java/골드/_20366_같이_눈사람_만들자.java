@@ -43,7 +43,6 @@ public class _20366_같이_눈사람_만들자 {
                 }
                 while(anaRight < (n-1) && anaRight == i || anaRight == j || anaRight == anaLeft){
                         anaRight ++;
-                    
                 }
                 System.out.println(anaLeft + " abc " + anaRight);
                 int tmp = calc(dp[i][j], anaLeft,anaRight, dp);
