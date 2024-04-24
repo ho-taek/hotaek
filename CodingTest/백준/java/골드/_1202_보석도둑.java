@@ -64,7 +64,7 @@ public class _1202_보석도둑 {
 
         while (!pq.isEmpty() && !bpq.isEmpty()) {
             Jewel jvpq = pq.poll();
-            Bag bvpq = bpq.poll();
+            Bag bvpq = bpq.peek();
 
             if (bvpq.weight >= jvpq.weight) {
                 if (bvpq.value == 0) {
