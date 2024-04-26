@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_2623_음악프로그램",
+      "request": "launch",
+      "mainClass": "백준.java.골드._2623_음악프로그램",
+      "projectName": "hotaek_5c2d340d"
+    },
+    {
+      "type": "java",
+      "name": "_1202_보석도둑",
+      "request": "launch",
+      "mainClass": "백준.java.골드._1202_보석도둑",
+      "projectName": "hotaek_5c2d340d"
+    },
+    {
+      "type": "java",
       "name": "_20366_같이_눈사람_만들자",
       "request": "launch",
       "mainClass": "백준.java.골드._20366_같이_눈사람_만들자",
