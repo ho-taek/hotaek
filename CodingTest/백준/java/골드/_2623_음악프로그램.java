@@ -45,8 +45,8 @@ public class _2623_음악프로그램 {
   public static void bfs(Queue<Integer> pq, List<List<Integer>> graph, boolean[] check, int[] table){
     Integer q = pq.poll();
     System.out.println(q);
-
     check[q] = true;
+    
     while(!pq.isEmpty()){
       for(int number : graph.get(q)){
         if(check[number]) continue;
