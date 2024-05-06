@@ -6,7 +6,11 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         System.out.println("0 ~ 100 사이의 난수 1개 발생 : " + (int) (Math.random() * 11));
 
-        Stack<Integer> li = new ArrayList<>();
+        int[] li = new int[] { 1, 2, 3 };
+
+        for (int i = 5; i > 0; i--) {
+            System.out.println(i);
+        }
 
     }
 
