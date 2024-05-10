@@ -4,10 +4,28 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) throws IOException {
-        System.out.println("0 ~ 100 사이의 난수 1개 발생 : " + (int) (Math.random() * 11));
 
-        Stack<Integer> li = new ArrayList<>();
+        Deque<Integer> deque = new LinkedList<>(Arrays.asList(4, 5));
+        deque.addFirst(3); // [3,4,5]
+        System.out.println(deque);
+        deque.addLast(6); // [3,4,5,6]
+        System.out.println(deque);
+        deque.offerFirst(2); // [2,3,4,5,6]
+        System.out.println(deque);
+        deque.offerLast(7); // [2,3,4,5,6,7]
+        System.out.println(deque);
 
+        deque.removeFirst(); // [3,4,5,6,7]
+        System.out.println(deque);
+        deque.removeLast(); // [3,4,5,6]
+        System.out.println(deque);
+
+        System.out.println(deque.getFirst()); // 3
+        System.out.println(deque.peekFirst()); // 3
+        System.out.println(deque);
+        System.out.println(deque.getLast()); // 6
+        System.out.println(deque.peekLast()); // 6
+        System.out.println(deque);
     }
 
     // public static void perm(int depth , boolean[] array, boolean[] output, int r,
