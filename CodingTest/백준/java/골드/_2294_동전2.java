@@ -40,6 +40,5 @@ public class _2294_동전2 {
         } else {
             System.out.println(dp[k]);
         }
-
     }
 }
