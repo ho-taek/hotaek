@@ -26,7 +26,7 @@ public class _2138_스위치와전구 {
 
         if (Arrays.equals(answer, leftTmp)) {
             System.out.println(0);
-            System.exit(1);
+            System.exit(0);
         }
         int leftResult = 1;
         boolean leftFlag = false;
@@ -68,7 +68,7 @@ public class _2138_스위치와전구 {
                 break;
             }
         }
-        System.out.println("왼 " + leftResult + " " + leftFlag + " 오 " + rightResult + " " + rightFlag);
+        
         if (!leftFlag && !rightFlag) {
             System.out.println(-1);
         } else {
