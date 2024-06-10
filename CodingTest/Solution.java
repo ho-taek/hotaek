@@ -7,9 +7,9 @@ public class Solution {
 
         Deque<Integer> deque = new ArrayDeque<>();
         String[] s = new String[] { "2", "3" };
-        
+
         String v = "sdf";
-        
+
         System.out.println(s);
         deque.offer(0);
         deque.offer(1);
