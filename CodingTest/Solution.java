@@ -7,14 +7,12 @@ public class Solution {
 
         Deque<Integer> deque = new ArrayDeque<>();
         String[] s = new String[] { "2", "3" };
-
-        String v = "sdf";
-
-        System.out.println(s);
-        deque.offer(0);
         deque.offer(1);
-        System.out.println(deque.peekLast());
-        System.out.println(deque.pollLast());
+        deque.offer(2);
+
+        System.out.println(deque.peek());
+        System.out.println(deque.poll());
+        List<String> li = new ArrayList<>();
 
     }
 
