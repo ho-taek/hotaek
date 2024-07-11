@@ -3,6 +3,7 @@ package 백준.java.골드;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.classfile.components.ClassPrinter;
 import java.util.*;
 
 public class _17836_공주님을구해라 {
@@ -14,6 +15,16 @@ public class _17836_공주님을구해라 {
     static int m;
     static int T;
     static int answer;
+
+    static class Node {
+        int x, y;
+    
+        public Node(int x, int y) {
+          this.x = x;
+          this.y = y;
+        }
+      }
+
 
     public static void main(String[] args) throws IOException{
 
@@ -33,9 +44,9 @@ public class _17836_공주님을구해라 {
                 graph[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-        boolean[][] visited = new boolean[n][m];
+        int[][] visited = new int[n][m];
+        bfs(visited);
 
-        dfs(visited, 0,0, false, 0);
         if(answer > T){
             System.out.println("Fail");
         }else{
@@ -43,36 +54,55 @@ public class _17836_공주님을구해라 {
         }
     }
 
-    public static void dfs(boolean[][] visited, int x, int y, boolean sword, int t){
-        if(t > T){
-            return;
-        }
+   public static void bfs(int[][] visited){
+        Queue<Node> queue = new LinkedList<>();
 
-        if(x == (n-1) && y == (m-1)){
-            if(t < answer){
-                answer = t;
+        int[] sword = new int[2];
+        boolean swordCheck = false;
+        queue.offer(new Node(0,0));
+        visited[0][0] = 0;
+
+        while(!queue.isEmpty()){
+            Node q = queue.poll();
+
+            int time = visited[q.x][q.y] + 1;
+      
+            if(time >= T){
+                break;
+            }
+
+            for(int i = 0 ; i < 4 ; i++){
+                int nx = q.x + dx[i];
+                int ny = q.y + dy[i];
+
+                if(nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
+
+                if(graph[nx][ny] == 1) continue;
+
+                if(graph[nx][ny] == 2){
+                    swordCheck = true;
+                    sword[0] = nx;
+                    sword[1] = ny;
+                }
+            
+                if(visited[nx][ny] == 0 | visited[nx][ny] > time){
+                    visited[nx][ny] = time;
+                    queue.offer(new Node(nx,ny));
+                }
+
             }
         }
 
-        for(int i = 0; i < 4 ; i++){
-            int nx = x + dx[i];
-            int ny = y + dy[i];
-            if(nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
-
-            if(!sword && graph[nx][ny] == 1) continue;
-
-            if(visited[nx][ny]) continue;
-
-            if(graph[nx][ny] == 2){
-                sword = true;
-            }
-
-            visited[nx][ny] = true;
-            dfs(visited, nx,ny, sword, t+1);
-            visited[nx][ny] = false;
+        if(visited[n-1][m-1] != 0 && visited[n-1][m-1] < answer ){
+            answer = visited[n-1][m-1];
         }
+        int swordValue = visited[sword[0]][sword[1]]+ (n-1-sword[0]) + (m-1-sword[1]);
+
+        if(answer > swordValue && swordCheck == true){
+            answer = swordValue;
+        }
+        
+   }
 
 
-
-    }
 }
