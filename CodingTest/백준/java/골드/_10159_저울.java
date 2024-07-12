@@ -58,8 +58,6 @@ public class _10159_저울 {
             }
 
         }
-
-
         return count;
     }
 }
