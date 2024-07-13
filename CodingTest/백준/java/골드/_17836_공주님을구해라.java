@@ -3,7 +3,6 @@ package 백준.java.골드;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.classfile.components.ClassPrinter;
 import java.util.*;
 
 public class _17836_공주님을구해라 {
