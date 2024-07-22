@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_1240_노드사이의거리",
+      "request": "launch",
+      "mainClass": "_1240_노드사이의거리",
+      "projectName": "hotaek_25f27600"
+    },
+    {
+      "type": "java",
       "name": "_3101_합이0",
       "request": "launch",
       "mainClass": "_3101_합이0",
