@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_3101_합이0",
+      "request": "launch",
+      "mainClass": "_3101_합이0",
+      "projectName": "hotaek_25f27600"
+    },
+    {
+      "type": "java",
       "name": "_2623_음악프로그램",
       "request": "launch",
       "mainClass": "백준.java.골드._2623_음악프로그램",
