@@ -10,8 +10,8 @@ public class Solution {
         deque.offer(1);
         deque.offer(2);
 
-        System.out.println(deque.peek());
-        System.out.println(deque.poll());
+        System.out.println(deque.pollLast());
+
         List<String> li = new ArrayList<>();
 
     }
