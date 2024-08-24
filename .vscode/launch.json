@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_17298_오큰수",
+      "request": "launch",
+      "mainClass": "백준.java.골드._17298_오큰수",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
       "name": "_1240_노드사이의거리",
       "request": "launch",
       "mainClass": "_1240_노드사이의거리",
