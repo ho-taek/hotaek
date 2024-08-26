@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_5052_전화번호목록",
+      "request": "launch",
+      "mainClass": "백준.java.골드._5052_전화번호목록",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_1655_가운데를말해요",
+      "request": "launch",
+      "mainClass": "백준.java.골드._1655_가운데를말해요",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
       "name": "_17298_오큰수",
       "request": "launch",
       "mainClass": "백준.java.골드._17298_오큰수",
