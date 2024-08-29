@@ -39,10 +39,14 @@ public class _5427_불 {
             fires = new LinkedList<>();
 
             Node start = null;
-            
+            visited = new int[n][m];
+
+            int count = 0;
+
             for(int i = 0; i < n; i ++){
                 String[] sts = br.readLine().split("");
                 for(int j = 0 ; j < m; j++){
+                    visited[i][j] = Integer.MAX_VALUE;
                     String s = sts[j];
                     graph[i][j] = s;
                     if(s.equals("*")){
@@ -50,15 +54,12 @@ public class _5427_불 {
                     }else if(s.equals("@")){
                         start = new Node(i,j);
                     }
+
+                    
                 }
             }
-            visited = new int[n][m];
-            for(int i =0; i < n; i++){
-                for(int j = 0; j < m; j++){
-                    visited[i][j] = Integer.MAX_VALUE;
-                }
-            }
-            
+
+   
             answer = Integer.MAX_VALUE;
             bfs(start);
             
@@ -125,13 +126,12 @@ public class _5427_불 {
     
                     if(nx == 0 || nx == (n-1) || ny == 0 || ny == (m-1)){
                         if(visited[nx][ny] < answer){
-
                             answer = visited[nx][ny];
                         }
-    
                     }
                 }
             }
+
             if(queue.isEmpty() && fires.isEmpty()){
                 break;
             }
