@@ -14,7 +14,6 @@ public class _1094_막대기 {
         int result = 0;
         for (int i = 0; i < 7; i++) {
             if ((n & (1 << i)) > 0) {
-                System.out.println(i + " , " + (n & (1 << i)));
                 result++;
             }
 
