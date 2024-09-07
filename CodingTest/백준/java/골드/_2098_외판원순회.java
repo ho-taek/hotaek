@@ -30,7 +30,7 @@ public class _2098_외판원순회 {
         dp = new int[n][(1 << n) - 1];
 
         for (int i = 0; i < n; i++) {
-            Arrays.fill(dp[i], INF);
+            Arrays.fill(dp[i], -1);
         }
 
         System.out.println(dfs(0, 1));
@@ -44,12 +44,13 @@ public class _2098_외판원순회 {
             return map[city][0]; // 완료되었으니까. 순환 싸이클 돌았을 때 시작 도시
         }
 
-        if (dp[city][visited] != INF) { // 이미 방문한 곳일 경우
+        if (dp[city][visited] != -1) { // 이미 방문한 곳일 경우
             return dp[city][visited];
         }
+        dp[city][visited] = INF;
 
         for (int i = 0; i < n; i++) { // 현재 도시부터 각 도시로 이동한 경우의 DFS
-            if ((visited & (1 << i)) == 0 && map[city][i] == 1) {
+            if ((visited & (1 << i)) == 0 && map[city][i] != 0) {
                 dp[city][visited] = Math.min(dp[city][visited], dfs(i, visited | (1 << i)) + map[city][i]);
             }
 
