@@ -12,26 +12,35 @@ public class _27210_신을모시는사당 {
         int n = Integer.parseInt(br.readLine());
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int[] left = new int[n];
-        int[] right = new int[n];
 
-        int first = Integer.parseInt(st.nextToken());
-        if (first == 1) {
-            left[0] = 1;
-        } else {
-            right[0] = 1;
-        }
+        int[] array = new int[n];
+
+        int[] dp = new int[n];
+
         int answer = 1;
-        for (int i = 1; i < n; i++) {
-            int value = Integer.parseInt(st.nextToken());
-            if (value == 1) {
-                left[i] = left[i - 1] + 1;
-                right[i] = right[i - 1];
+        for (int i = 0; i < n; i++) {
+            array[i] = Integer.parseInt(st.nextToken());
+        }
+
+        for (int i = 0; i < n; i++) {
+            int cur = array[i] == 1 ? -1 : 1;
+            if (i == 0) {
+                dp[i] = cur;
             } else {
-                right[i] = right[i - 1] + 1;
-                left[i] = left[i - 1];
+                dp[i] = Math.max(dp[i - 1] + cur, cur);
             }
-            answer = Math.max(answer, Math.abs(left[i] - right[i]));
+            answer = Math.max(answer, dp[i]);
+        }
+
+        dp = new int[n];
+        for (int i = 0; i < n; i++) {
+            int cur = array[i] == 2 ? -1 : 1;
+            if (i == 0) {
+                dp[i] = cur;
+            } else {
+                dp[i] = Math.max(dp[i - 1] + cur, cur);
+            }
+            answer = Math.max(answer, dp[i]);
         }
 
         System.out.println(answer);

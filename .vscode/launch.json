@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_15681_트리와쿼리",
+      "request": "launch",
+      "mainClass": "백준.java.골드._15681_트리와쿼리",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_27212_미팅",
+      "request": "launch",
+      "mainClass": "백준.java.골드._27212_미팅",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
       "name": "_5052_전화번호목록",
       "request": "launch",
       "mainClass": "백준.java.골드._5052_전화번호목록",
