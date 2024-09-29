@@ -30,10 +30,6 @@ public class _2293_동전 {
                 }
             }
         }
-
-        for (int i = 1; i <= n; i++) {
-            System.out.println(Arrays.toString(dp[i]));
-        }
         System.out.println(dp[n][k]);
     }
 }
