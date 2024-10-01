@@ -28,7 +28,6 @@ public class _2470_두용액 {
             int value = array[left] + array[right];
 
             if (Math.abs(value) < min) {
-                System.out.println(array[left] + " " + array[right]);
                 answer[0] = array[left];
                 answer[1] = array[right];
                 min = Math.abs(value);
