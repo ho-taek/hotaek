@@ -8,7 +8,7 @@ import java.util.*;
 public class _17090_미로탈출하기 {
     static int n, m;
     static char[][] graph;
-    static int[][] state; // 0: unvisited, 1: visiting, 2: visited
+    static int[][] state; // 0: 방문안한, 1: 방문중, 2: 방문했던
     static boolean[][] dp;
 
     static int[] dx = { -1, 1, 0, 0 };
@@ -63,9 +63,7 @@ public class _17090_미로탈출하기 {
             if (state[nx][ny] == 0) {
                 dfs(nx, ny);
                 dp[x][y] = dp[nx][ny];
-            } else if (state[nx][ny] == 1) {
-                dp[x][y] = false; // 사이클 발생
-            } else {
+            } else if (state[nx][ny] == 2) {
                 dp[x][y] = dp[nx][ny];
             }
         }
