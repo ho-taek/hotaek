@@ -39,7 +39,7 @@ public class _1717_집합의표현 {
                 System.out.println("NO");
             }
         }
-        System.out.println(Arrays.toString(parent));
+
     }
 
     public static void union(int x, int y) {
