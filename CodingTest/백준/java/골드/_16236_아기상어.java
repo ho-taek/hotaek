@@ -59,7 +59,7 @@ public class _16236_아기상어 {
                 int value = Integer.parseInt(st.nextToken());
                 if (value == 9) {
                     start = new Node(i, j, 0);
-                    graph[i][j] = 0; // 시작 위치는 빈 칸으로 변경
+                    graph[i][j] = 0;
                 } else {
                     graph[i][j] = value;
                 }
