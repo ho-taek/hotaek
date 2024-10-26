@@ -39,7 +39,6 @@ public class _14425_문자열집합 {
 
     static boolean check(int node, String s, int index) {
         if (s.length() == index) {
-            System.out.println("#### " + s + "#####");
             return trie.get(node).value;
         }
 
