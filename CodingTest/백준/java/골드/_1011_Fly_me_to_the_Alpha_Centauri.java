@@ -21,7 +21,7 @@ public class _1011_Fly_me_to_the_Alpha_Centauri {
 
             if (end - start == 1) {
                 bw.write(1 + "\n");
-
+                continue;
             }
 
             int answer = 0;
