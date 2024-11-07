@@ -33,22 +33,21 @@ public class _1946_신입사원 {
 
         for (int t = 0; t < T; t++) {
             int n = Integer.parseInt(br.readLine());
-            PriorityQueue<Person> person = new PriorityQueue<>();
+            List<Person> person = new ArrayList<>();
             for (int i = 0; i < n; i++) {
                 st = new StringTokenizer(br.readLine());
                 int a = Integer.parseInt(st.nextToken());
                 int b = Integer.parseInt(st.nextToken());
                 person.add(new Person(a, b));
             }
+            Collections.sort(person);
             int answer = 0;
             int minValue = Integer.MAX_VALUE;
-            for (int i = 0; i < n; i++) {
-                Person p = person.poll();
+            for (Person p : person) {
                 if (p.second < minValue) {
                     answer++;
                     minValue = p.second;
                 }
-
             }
             bw.write(answer + "\n");
         }
