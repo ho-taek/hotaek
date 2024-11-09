@@ -9,7 +9,7 @@ public class _10971_외판원순회2 {
     static int n;
     static int[][] map;
     static int[][] dp;
-    static int INF = Integer.MAX_VALUE;
+    static final int INF = 11000000;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
