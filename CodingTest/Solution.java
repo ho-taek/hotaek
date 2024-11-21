@@ -3,16 +3,31 @@ import java.util.*;
 
 public class Solution {
 
+    static class Node implements Comparable<Node>{
+        int x;
+        int y;
+
+        public Node(int x, int y){
+            this.x = x;
+            this.y = y;
+        }
+
+
+        @Override
+        public int compareTo(Solution.Node o) {
+            return this.x - o.x;
+        
+    }
+}
+
     public static void main(String[] args) throws IOException {
 
-        Deque<Integer> deque = new ArrayDeque<>();
-        String[] s = new String[] { "2", "3" };
-        deque.offer(1);
-        deque.offer(2);
+        PriorityQueue<Node> pq = new PriorityQueue<>();
 
-        System.out.println(deque.pollLast());
+        pq.add(new Node(1, 2));
+        pq.add(new Node(2, 1));
 
-        List<String> li = new ArrayList<>();
+        System.out.println(pq.poll().x);
 
     }
 

@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_21608_상어초등학교",
+      "request": "launch",
+      "mainClass": "_21608_상어초등학교",
+      "projectName": "hotaek_25f27600"
+    },
+    {
+      "type": "java",
+      "name": "_21608_상어초등학교",
+      "request": "launch",
+      "mainClass": "백준.java.골드._21608_상어초등학교",
+      "projectName": "hotaek_25f27600"
+    },
+    {
+      "type": "java",
+      "name": "Solution",
+      "request": "launch",
+      "mainClass": "Solution",
+      "projectName": "hotaek_25f27600"
+    },
+    {
+      "type": "java",
       "name": "_15681_트리와쿼리",
       "request": "launch",
       "mainClass": "백준.java.골드._15681_트리와쿼리",
