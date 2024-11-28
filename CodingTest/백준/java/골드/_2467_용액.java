@@ -30,7 +30,6 @@ public class _2467_용액 {
 
         while (left < right) {
             long sum = arr[left] + arr[right];
-            System.out.println(tmp);
             if (Math.abs(sum) < tmp) {
                 tmp = Math.abs(sum);
                 answer[0] = arr[left];
