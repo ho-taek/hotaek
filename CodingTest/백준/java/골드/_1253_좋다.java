@@ -39,7 +39,7 @@ public class _1253_좋다 {
 
                 int sum = graph[left] + graph[right];
 
-                if (sum == graph[i]) { // "좋다" 조건 만족
+                if (sum == graph[i]) { 
                     answer++;
                     break;
                 } else if (sum < graph[i]) {
