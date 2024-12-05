@@ -4,8 +4,8 @@ import java.io.*;
 import java.util.*;
 
 public class _세그먼트트리 {
-    static long[] a;
-    static long[] d;
+    static long[] a; // -> 배열
+    static long[] d; // -> 세그트리
 
     // node -> 노드 번호
 
@@ -34,7 +34,9 @@ public class _세그먼트트리 {
         d[node] = d[node * 2] + d[node * 2 + 1];
     }
 
+    // i부터 j까지의 구간합구하기
     public static long query(int node, int start, int end, int i, int j) {
+
         if (start > j || end < i)
             return 0;
         if (start >= i && end <= j)
