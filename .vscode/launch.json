@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_10868_최솟값",
+      "request": "launch",
+      "mainClass": "백준.java.골드._10868_최솟값",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
       "name": "_2357_최솟값과최댓값",
       "request": "launch",
       "mainClass": "백준.java.골드._2357_최솟값과최댓값",
