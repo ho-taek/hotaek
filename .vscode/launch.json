@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_2268_수들의합7",
+      "request": "launch",
+      "mainClass": "백준.java.골드._2268_수들의합7",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_5052_전화번호목록_3",
+      "request": "launch",
+      "mainClass": "백준.java.골드._5052_전화번호목록_3",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
       "name": "_1275_커피숍",
       "request": "launch",
       "mainClass": "백준.java.골드._1275_커피숍",
