@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_14428_수열과쿼리16",
+      "request": "launch",
+      "mainClass": "백준.java.골드._14428_수열과쿼리16",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
       "name": "_2268_수들의합7",
       "request": "launch",
       "mainClass": "백준.java.골드._2268_수들의합7",
