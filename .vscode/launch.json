@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_1072_게임",
+      "request": "launch",
+      "mainClass": "백준.java.실버._1072_게임",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
+      "name": "_1029_그림교환",
+      "request": "launch",
+      "mainClass": "백준.java.골드._1029_그림교환",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
       "name": "_14428_수열과쿼리16",
       "request": "launch",
       "mainClass": "백준.java.골드._14428_수열과쿼리16",
