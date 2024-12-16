@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "_2252_줄세우기",
+      "request": "launch",
+      "mainClass": "백준.java.골드._2252_줄세우기",
+      "projectName": "hotaek_8e182f63"
+    },
+    {
+      "type": "java",
       "name": "_12837_가계부",
       "request": "launch",
       "mainClass": "백준.java.골드._12837_가계부",
