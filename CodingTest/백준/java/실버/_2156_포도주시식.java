@@ -12,41 +12,23 @@ public class _2156_포도주시식 {
 
         int n = Integer.parseInt(br.readLine());
 
-        int[] value = new int[n];
+        int arr[] = new int[n + 1];
+        int dp[] = new int[n + 1];
 
-        for (int i = 0; i < n; i++) {
-            value[i] = Integer.parseInt(br.readLine());
+        for (int i = 1; i <= n; i++) { // 그래프
+            arr[i] = Integer.parseInt(br.readLine());
         }
 
-        int[][] dp = new int[n + 1][2];
+        dp[1] = arr[1];
 
-        dp[1][0] = value[0];
-        dp[1][1] = value[0];
-        int result = 0;
-        if (n == 1) {
-            result = value[0];
-        } else {
-            for (int i = 2; i <= n; i++) {
-                int first = dp[i - 2][1] + value[i - 1];
-                int second = dp[i - 1][0] + value[i - 1];
-
-                if (first > result) {
-                    result = first;
-                }
-                if (second > result) {
-                    result = second;
-                }
-
-                dp[i][0] = first;
-                dp[i][1] = second;
-
-            }
+        if (n > 1) {
+            dp[2] = arr[1] + arr[2];
         }
 
-        for (int i = 0; i < n; i++) {
-            System.out.println(Arrays.toString(dp[i]));
+        for (int i = 3; i <= n; i++) {
+            dp[i] = Math.max(dp[i - 1], Math.max(dp[i - 2] + arr[i], dp[i - 3] + arr[i - 1] + arr[i]));
         }
 
-        System.out.println(result);
+        System.out.println(dp[n]);
     }
 }
