@@ -26,21 +26,14 @@ public class _1744_수묶기 {
             return;
         }
 
-        // 음수끼리 곱하기 (0 포함 가능)
-        while (start < end && arr[start] < 0 && arr[start + 1] <= 0) {
+        while (start < end && arr[start] < 0 && arr[start + 1] <= 0) { // 음수곱
             answer += arr[start] * arr[start + 1];
-            start += 2; // 두 개를 곱했으므로 인덱스를 2 증가
+            start += 2;
         }
 
-        // 양수끼리 곱하기 (1 제외)
-        while (end > 0 && arr[end] > 1 && arr[end - 1] > 1) {
+        while (end > 0 && arr[end] > 1 && arr[end - 1] > 1) { // 양수 곱
             answer += arr[end] * arr[end - 1];
-            end -= 2; // 두 개를 곱했으므로 인덱스를 2 감소
-        }
-
-        // 음수나 양수 남은 값 더하기
-        for (int i = start; i <= end; i++) {
-            answer += arr[i];
+            end -= 2;
         }
 
         for (int i = end; i >= start; i--) {
