@@ -25,7 +25,6 @@ public class _1043_거짓말 {
         st = new StringTokenizer(br.readLine());
 
         int tCount = Integer.parseInt(st.nextToken());
-
         if (tCount == 0) {
             System.out.println(m);
             return;
